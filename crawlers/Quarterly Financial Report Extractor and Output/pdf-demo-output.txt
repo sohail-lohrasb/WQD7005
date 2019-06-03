@@ -1,0 +1,2 @@
+Current Year Quarter,Preceding Year Quarter,% Change,Current Year to Date,Preceding Year to Date,% Change
+81105,91473,11,162663,182184,11

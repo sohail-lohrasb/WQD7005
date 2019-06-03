@@ -1,0 +1,68 @@
+CREATE TABLE TheStarData (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Datetime VARCHAR(50) NOT NULL,
+  CompanySymbol VARCHAR(50) NOT NULL,
+  OpenPrice FLOAT,
+  HighPrice FLOAT,
+  LowPrice FLOAT,
+  LastPrice FLOAT
+);
+
+CREATE TABLE MalaysiastockbizData (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Date VARCHAR(50) NOT NULL,
+  CompanySymbol VARCHAR(50) NOT NULL,
+  OpenPrice FLOAT,
+  HighPrice FLOAT,
+  LowPrice FLOAT,
+  LastPrice FLOAT
+);
+
+CREATE TABLE QuarterlyReports (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  CompanySymbol VARCHAR(50) NOT NULL,
+  Date VARCHAR(50) NOT NULL,
+  FinancialYear VARCHAR(50) NOT NULL,
+  FinancialQuarter VARCHAR(50) NOT NULL,
+  Revenue_RM_000 FLOAT,
+  PBT_RM_000 FLOAT,
+  NetProfit_RM_000 FLOAT,
+  EPS_Cent FLOAT,
+  Dividend_Cent FLOAT,
+  NTA_RM FLOAT
+);
+
+CREATE TABLE Indices (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Datetime VARCHAR(50) NOT NULL,
+  IndexName VARCHAR(50) NOT NULL,
+  LastPrice FLOAT,
+  HighPrice FLOAT,
+  LowPrice FLOAT
+);
+
+CREATE TABLE Tweets (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  CompanyFullname VARCHAR(50) NOT NULL,
+  CompanySymbol VARCHAR(50) NOT NULL,
+  TweetText VARCHAR(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  FavoriteCount INT,
+  CreatedAt VARCHAR(50),
+  HashTags VARCHAR(300),
+  TweetId VARCHAR(200),
+  Language VARCHAR(50),
+  Urls VARCHAR(500),
+  UserFollowers INT,
+  UserScreenName VARCHAR(200),
+  CrawlingTime VARCHAR(50)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+
+CREATE TABLE TheStarNews (
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Link VARCHAR(500) NOT NULL,
+  Headline VARCHAR(500) NOT NULL,
+  Category VARCHAR(200),
+  Date VARCHAR(100),
+  Time VARCHAR(50),
+  Story VARCHAR(5000)
+);
